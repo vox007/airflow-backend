@@ -1,0 +1,210 @@
+[2022-04-13 03:12:28,671] {scheduler_job.py:182} INFO - Started process (PID=32) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:12:28,671] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:12:28,672] {logging_mixin.py:104} INFO - [2022-04-13 03:12:28,672] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:12:28,698] {logging_mixin.py:104} INFO - [2022-04-13 03:12:28,696] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:12:28,698] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:12:28,745] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.078 seconds
+[2022-04-13 03:12:59,139] {scheduler_job.py:182} INFO - Started process (PID=60) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:12:59,141] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:12:59,141] {logging_mixin.py:104} INFO - [2022-04-13 03:12:59,141] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:12:59,153] {logging_mixin.py:104} INFO - [2022-04-13 03:12:59,150] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:12:59,154] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:12:59,179] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.042 seconds
+[2022-04-13 03:13:29,505] {scheduler_job.py:182} INFO - Started process (PID=88) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:13:29,505] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:13:29,506] {logging_mixin.py:104} INFO - [2022-04-13 03:13:29,506] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:13:29,515] {logging_mixin.py:104} INFO - [2022-04-13 03:13:29,513] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:13:29,516] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:13:29,534] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.032 seconds
+[2022-04-13 03:13:59,933] {scheduler_job.py:182} INFO - Started process (PID=116) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:13:59,935] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:13:59,935] {logging_mixin.py:104} INFO - [2022-04-13 03:13:59,935] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:13:59,946] {logging_mixin.py:104} INFO - [2022-04-13 03:13:59,944] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:13:59,946] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:13:59,965] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.035 seconds
+[2022-04-13 03:14:30,498] {scheduler_job.py:182} INFO - Started process (PID=144) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:14:30,499] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:14:30,499] {logging_mixin.py:104} INFO - [2022-04-13 03:14:30,499] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:14:30,508] {logging_mixin.py:104} INFO - [2022-04-13 03:14:30,506] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:14:30,508] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:14:30,525] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.030 seconds
+[2022-04-13 03:15:00,792] {scheduler_job.py:182} INFO - Started process (PID=172) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:15:00,793] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:15:00,794] {logging_mixin.py:104} INFO - [2022-04-13 03:15:00,794] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:15:00,802] {logging_mixin.py:104} INFO - [2022-04-13 03:15:00,800] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:15:00,803] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:15:00,820] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.031 seconds
+[2022-04-13 03:15:31,230] {scheduler_job.py:182} INFO - Started process (PID=200) to work on /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:15:31,231] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/second_ dag.py for tasks to queue
+[2022-04-13 03:15:31,231] {logging_mixin.py:104} INFO - [2022-04-13 03:15:31,231] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:15:31,241] {logging_mixin.py:104} INFO - [2022-04-13 03:15:31,239] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/second_ dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/second_ dag.py", line 15, in <module>
+    hello_operator = PythonOperator(task_id='hello_task', python_callable=print_hello, dag=dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 101, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py", line 94, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 520, in __init__
+    self.dag = dag or DagContext.get_current_dag()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2022-04-13 03:15:31,241] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/second_ dag.py
+[2022-04-13 03:15:31,263] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/second_ dag.py took 0.036 seconds
